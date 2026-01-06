@@ -1,0 +1,316 @@
+/* ===== CSS VARIABLES (THEME COLORS) ===== */
+:root {
+  --primary-color: #1d428a;   /* Warriors blue default */
+  --accent-color: #ffc72c;    /* Warriors gold default */
+  --bg-gradient-top: #1d428a;
+  --bg-gradient-bottom: #0b1a33;
+  --text-on-primary: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, var(--bg-gradient-top), var(--bg-gradient-bottom));
+  color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* ===== GLOBAL LAYOUT ===== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== HEADER / NAV ===== */
+.site-header {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  padding: 0.75rem 1rem;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.site-header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.main-nav a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.main-nav a.active {
+  background: var(--accent-color);
+  color: #111827;
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+  text-align: center;
+  padding: 0.75rem;
+  border-top: 2px solid var(--accent-color);
+}
+
+/* ===== HOME PAGE ===== */
+.hero {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+/* cards layout */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* team select card */
+.team-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.team-select select {
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #6b7280;
+  outline: none;
+}
+
+/* quick stats card */
+.quick-stats ul {
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.quick-stats li + li {
+  margin-top: 0.25rem;
+}
+
+/* carousel card */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carousel-view {
+  position: relative;
+  height: 220px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  font-size: 0.85rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15,23,42,0.9);
+  border: 1px solid #9ca3af;
+  color: #e5e7eb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.carousel-btn.left {
+  left: 0.75rem;
+}
+
+.carousel-btn.right {
+  right: 0.75rem;
+}
+
+/* ===== PLAYERS / SCHEDULES / NEWS / CHAT / CONTACT ===== */
+.section-heading {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.simple-list {
+  list-style: none;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.simple-list li + li {
+  margin-top: 0.4rem;
+}
+
+/* news */
+#newsResults {
+  margin-top: 1rem;
+}
+
+.news-item {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* chat */
+.chat-box {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.chat-messages {
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.chat-messages li + li {
+  margin-top: 0.3rem;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.chat-input-row input {
+  flex: 1;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #6b7280;
+  outline: none;
+}
+
+.chat-input-row button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-color);
+  color: #111827;
+  cursor: pointer;
+}
+
+/* contact form */
+.contact-form {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 500px;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #6b7280;
+  outline: none;
+  font: inherit;
+}
+
+.contact-form button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-color);
+  color: #111827;
+  cursor: pointer;
+}
+
+/* small screens */
+@media (min-width: 700px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

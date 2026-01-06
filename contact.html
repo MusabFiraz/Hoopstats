@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoopStats - Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-row">
+        <div class="logo-text">HoopStats</div>
+      </div>
+      <p class="tagline">Contact the HoopStats team.</p>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="schedules.html">Schedules</a>
+        <a href="news.html">News</a>
+        <a href="chat.html">Chat</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="section-heading">Send Us Feedback</h2>
+
+    <form id="contactForm" class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="font-size: 0.85rem; margin-top: 0.75rem;">
+      This is a demo form. In a real deployment, this would send your feedback to the site owner.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 HoopStats. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

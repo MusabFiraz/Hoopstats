@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoopStats - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-row">
+        <div class="logo-text">HoopStats</div>
+      </div>
+      <p class="tagline">Track your team, follow player stats, and stay connected with fans.</p>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="players.html">Players</a>
+        <a href="schedules.html">Schedules</a>
+        <a href="news.html">News</a>
+        <a href="chat.html">Chat</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to HoopStats</h1>
+      <p>
+        Start by picking your team below. Warriors are fully featured, and
+        Lakers are included as a simple example layout. You can then explore
+        players, schedules, news, and fan chat.
+      </p>
+    </section>
+
+    <section class="card-grid">
+      <!-- TEAM SELECT CARD -->
+      <article class="card team-select">
+        <h2>Select Your Team</h2>
+        <select id="teamSelect">
+          <option value="warriors">Golden State Warriors</option>
+          <option value="lakers">Los Angeles Lakers (Example)</option>
+        </select>
+
+        <div>
+          <p><strong>Current Team:</strong> <span id="currentTeamName"></span></p>
+          <p><strong>Record:</strong> <span id="currentTeamRecord"></span></p>
+          <p><strong>Star Player:</strong> <span id="currentTeamStar"></span></p>
+          <p><strong>Star Stats:</strong> <span id="currentTeamStarStats"></span></p>
+        </div>
+      </article>
+
+      <!-- QUICK STATS (STATIC TEXT FOR WARRIORS CONTEXT) -->
+      <article class="card quick-stats">
+        <h2>What You Can Do</h2>
+        <ul>
+          <li>View simple player stats for Warriors and example Lakers roster.</li>
+          <li>Check out a basic schedule layout for upcoming games.</li>
+          <li>Load real NBA game data on the News page using a live API.</li>
+          <li>Chat with other fans in the demo chatroom.</li>
+        </ul>
+      </article>
+
+      <!-- CAROUSEL CARD -->
+      <article class="card carousel-container">
+        <h2>Warriors Highlights</h2>
+        <div id="carouselView" class="carousel-view">
+          <button class="carousel-btn left" type="button">&#8249;</button>
+          <div class="carousel-caption" id="carouselCaption"></div>
+          <button class="carousel-btn right" type="button">&#8250;</button>
+        </div>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">
+          Carousel is a visual placeholder – in a full app this could show real game photos or clips.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 HoopStats. All rights reserved.</p>
+  </footer>
+</body>
+</html>

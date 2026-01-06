@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoopStats - News</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-row">
+        <div class="logo-text">HoopStats</div>
+      </div>
+      <p class="tagline">Loads real NBA game data using a live API.</p>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="schedules.html">Schedules</a>
+        <a href="news.html" class="active">News</a>
+        <a href="chat.html">Chat</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="section-heading">NBA Game Feed (BallDontLie API)</h2>
+    <p style="font-size: 0.9rem; color: #e5e7eb; margin-bottom: 0.75rem;">
+      Click the button below to load a few recent NBA games from a public API. This demo focuses on showing
+      that the site can make asynchronous JavaScript requests and display data dynamically.
+    </p>
+
+    <button id="loadNewsBtn" class="news-btn" type="button">Load Latest Games</button>
+
+    <div id="newsResults"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 HoopStats. All rights reserved.</p>
+  </footer>
+</body>
+</html>
